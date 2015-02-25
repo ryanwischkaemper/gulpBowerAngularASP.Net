@@ -1,0 +1,1 @@
+angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("views/index.html","<div>Hello from {{index.title}} controller</div>");}]);

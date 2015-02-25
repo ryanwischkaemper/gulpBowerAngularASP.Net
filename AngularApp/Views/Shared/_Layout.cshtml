@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - AngularApp</title>
+    
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/public/vendor/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/public/vendor/toastr/toastr.css">
+    <link rel="stylesheet" href="/public/vendor/bootstrap/dist/css/bootstrap.css">
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/public/content/styles/app.css">
+    <!-- endinject -->
+
+</head>
+<body ng-app="angularApp">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("AngularApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <!-- bower:js -->
+    <script src="/public/vendor/angular/angular.js"></script>
+    <script src="/public/vendor/jquery/dist/jquery.js"></script>
+    <script src="/public/vendor/moment/moment.js"></script>
+    <script src="/public/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/public/vendor/toastr/toastr.js"></script>
+    <script src="/public/vendor/lodash/lodash.js"></script>
+    <script src="/public/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/public/vendor/angular-route/angular-route.js"></script>
+    <script src="/public/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endinject -->
+    
+    <script src="/public/app/templates.js"></script>
+    
+    <!-- inject:js -->
+    <script src="/public/app/angularapp.module.js"></script>
+    <script src="/public/app/controllers/index.js"></script>
+    <script src="/public/app/config.route.js"></script>
+    <!-- endinject -->
+
+</body>
+</html>
